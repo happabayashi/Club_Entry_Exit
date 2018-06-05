@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Club_Entry_Exit</string>
-    <string name="title_name">部室入室状況確認</string>
-    <string name="clab_name">プロ研</string>
+    <string name="title_name">部室入退室管理アプリ</string>
+    <string name="club_name">プロ研</string>
+    <string name="confirmationButton_name">部室状況確認</string>
+    <string name="inOunButton_name">入退室</string>
+    <string name="settingButton_name">設定</string>
+    <string name="name_setting">表示名</string>
+    <string name="return_name">戻る</string>
+    <string name="now_name">現在の名前</string>
+    <string name="show_name">表示名</string>
+    <string name="storage_button">保存</string>
 </resources>
