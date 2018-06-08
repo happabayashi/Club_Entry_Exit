@@ -13,30 +13,29 @@ public class EnteringActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entering);
 
-        Button button1 = findViewById(R.id.Enterbutton);
-        Button button2 = findViewById(R.id.Leavebutton);
+        Button enterbutton = findViewById(R.id.Enterbutton);
+        Button exitbutton = findViewById(R.id.Exitbutton);
 
         //入室処理
-        // (変数名は後々書き直します)
-        button1.setOnClickListener(new View.OnClickListener(){
+        enterbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = getIntent();
-                String name = intent.getStringExtra( "NAME1" );
-                name = "安室さん";
+                String name = intent.getStringExtra( "aaa" ); //mainActivityから受け取る予定(だから名前は適当)
+                name = "安室さん";  //表示用にとりあえずベタ打ちで入れただけ
                 intent = new Intent(EnteringActivity.this, showActivity.class);
-                intent.putExtra("NAME", name + "が入室しました。");
+                intent.putExtra("", name + "が入室しました。");
                 startActivity(intent);
             }
         });
 
         //退室処理
-        button2.setOnClickListener(new View.OnClickListener() {
+        exitbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = getIntent();
-                String name = intent.getStringExtra( "NAME" );
+                String name = intent.getStringExtra( "aaa" );
                 name = "降谷さん";
                 intent = new Intent(EnteringActivity.this, showActivity.class);
-                intent.putExtra("NAME", name + "が退室しました。");
+                intent.putExtra("EntryandExit", name + "が退室しました。");
                 startActivity(intent);
             }
         });
