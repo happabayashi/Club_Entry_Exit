@@ -23,8 +23,10 @@ public class EnteringActivity extends AppCompatActivity {
                 String name = intent.getStringExtra( "aaa" ); //mainActivityから受け取る予定(だから名前は適当)
                 name = "安室さん";  //表示用にとりあえずベタ打ちで入れただけ
                 intent = new Intent(EnteringActivity.this, showActivity.class);
-                intent.putExtra("", name + "が入室しました。");
-                startActivity(intent);
+
+                //分岐せずに1つのインテント(EntryAndExit)で作ってみた
+                intent.putExtra("EntryAndExit", name + "が入室しました。");
+                startActivity(intent);  //showActivityへ
             }
         });
 
@@ -35,7 +37,8 @@ public class EnteringActivity extends AppCompatActivity {
                 String name = intent.getStringExtra( "aaa" );
                 name = "降谷さん";
                 intent = new Intent(EnteringActivity.this, showActivity.class);
-                intent.putExtra("EntryandExit", name + "が退室しました。");
+
+                intent.putExtra("EntryAndExit", name + "が退室しました。");
                 startActivity(intent);
             }
         });
