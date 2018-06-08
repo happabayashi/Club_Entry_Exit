@@ -26,7 +26,7 @@ public class EnteringActivity extends AppCompatActivity {
 
                 //分岐せずに1つのインテント(EntryAndExit)で作ってみた
                 intent.putExtra("EntryAndExit", name + "が入室しました。");
-                startActivity(intent);  //showActivityへ
+                startActivity(intent);  //showActivityへ(Enterと違って先頭のsは半角です ごめん)
             }
         });
 

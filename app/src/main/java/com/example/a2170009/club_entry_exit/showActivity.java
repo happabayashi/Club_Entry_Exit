@@ -15,7 +15,7 @@ public class showActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         // Enteringアクティビティから来たintentを変換して格納
-        String message = intent.getStringExtra( "EnterndExit" );
+        String message = intent.getStringExtra( "EnterAndExit" );
         textView.setText(message);
     }
 }
