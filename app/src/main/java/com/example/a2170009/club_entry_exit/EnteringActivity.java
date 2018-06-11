@@ -21,7 +21,7 @@ public class EnteringActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = getIntent();
                 String name = intent.getStringExtra( "aaa" ); //mainActivityから受け取る予定(だから名前は適当)
-                name = "安室さん";  //表示用にとりあえずベタ打ちで入れただけ
+                name = "レム";  //表示用にとりあえずベタ打ちで入れただけ
                 intent = new Intent(EnteringActivity.this, showActivity.class);
 
                 //分岐せずに1つのインテント(EntryAndExit)で作ってみた
@@ -35,7 +35,7 @@ public class EnteringActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = getIntent();
                 String name = intent.getStringExtra( "aaa" );
-                name = "降谷さん";
+                name = "レム";
                 intent = new Intent(EnteringActivity.this, showActivity.class);
 
                 intent.putExtra("EntryAndExit", name + "が退室しました。");
