@@ -1,6 +1,8 @@
 package com.example.a2170009.club_entry_exit;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,8 +22,8 @@ public class EnteringActivity extends AppCompatActivity {
         enterbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = getIntent();
-                String name = intent.getStringExtra( "aaa" ); //mainActivityから受け取る予定(だから名前は適当)
-                name = "レム";  //表示用にとりあえずベタ打ちで入れただけ
+                final SharedPreferences nameData = getSharedPreferences("SaveData", Context.MODE_PRIVATE);
+                String name = nameData.getString("userName", "NoName");
                 intent = new Intent(EnteringActivity.this, showActivity.class);
 
                 //分岐せずに1つのインテント(EntryAndExit)で作ってみた
@@ -34,8 +36,8 @@ public class EnteringActivity extends AppCompatActivity {
         exitbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = getIntent();
-                String name = intent.getStringExtra( "aaa" );
-                name = "レム";
+                final SharedPreferences nameData = getSharedPreferences("SaveData", Context.MODE_PRIVATE);
+                String name = nameData.getString("userName", "NoName");
                 intent = new Intent(EnteringActivity.this, showActivity.class);
 
                 intent.putExtra("EntryAndExit", name + "が退室しました。");

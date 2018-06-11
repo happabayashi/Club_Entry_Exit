@@ -32,20 +32,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), activity_setting.class);
-//                intent.putExtra("name", requestCode);
-//                startActivityForResult(intent, requestCode);
                 startActivity(intent);
             }
         });
     }
-    //設定画面から戻ってきたときに値(名前)を受け取る
-//    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-//        if(requestCode == 1001){
-//            if(resultCode == Activity.RESULT_OK){
-//                name = intent.getStringExtra("userName");
-//                settingButton.setText(name);
-//            }
-//        }
-//    }
 
 }
