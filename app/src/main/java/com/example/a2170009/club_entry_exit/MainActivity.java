@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //部室状況確認
         confirmationButton = findViewById(R.id.confirmationButton);
         confirmationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //入退室ボタン有効化、画面遷移
         inOutButton = findViewById(R.id.inOutButton);
         inOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
