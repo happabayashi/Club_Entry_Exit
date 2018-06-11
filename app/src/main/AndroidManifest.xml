@@ -19,8 +19,12 @@
             android:label="@string/name_setting">
         </activity>
         <activity android:name=".EnteringActivity"
-            android:label="@string/entryExit_label">
-        </activity>
+
+            android:label="@string/entryExit_label"></activity>
+        <activity android:name=".room_detailsActivity"></activity>
+        <activity android:name=".room_situationActivity"></activity>
+        <activity android:name=".showActivity"></activity>
+
     </application>
 
 </manifest>

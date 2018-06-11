@@ -12,6 +12,11 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private static final int requestCode = 1001;
 
+    //部室状況確認ボタン
+    Button confirmationButton;
+    //入退室ボタン
+    Button inOutButton;
+    //設定ボタン
     Button settingButton;
 
     @Override
@@ -35,6 +40,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        confirmationButton = findViewById(R.id.confirmationButton);
+        confirmationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplication(), room_situationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        inOutButton = findViewById(R.id.inOutButton);
+        inOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplication(), EnteringActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
 }
