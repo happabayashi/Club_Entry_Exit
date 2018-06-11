@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".room_situationActivity" />
-        <activity android:name=".EnteringActivity" />
-        <activity android:name=".showActivity"></activity>
+        <activity android:name=".activity_setting"
+            android:label="@string/name_setting">
+        </activity>
+<!--        <activity android:name=".room_situationActivity"></activity>-->
     </application>
 
 </manifest>
