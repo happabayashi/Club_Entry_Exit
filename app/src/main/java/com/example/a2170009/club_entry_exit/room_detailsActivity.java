@@ -12,7 +12,6 @@ public class room_detailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.room_details);
-
         Button buttonReturn = findViewById(R.id.buttonReturn);
 
         buttonReturn.setOnClickListener(new View.OnClickListener() {

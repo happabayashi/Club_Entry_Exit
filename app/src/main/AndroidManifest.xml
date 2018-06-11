@@ -12,7 +12,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -20,11 +19,12 @@
             android:label="@string/name_setting">
         </activity>
         <activity android:name=".EnteringActivity"
+
             android:label="@string/entryExit_label"></activity>
         <activity android:name=".room_detailsActivity"></activity>
         <activity android:name=".room_situationActivity"></activity>
         <activity android:name=".showActivity"></activity>
-<!--        <activity android:name=".room_situationActivity"></activity>-->
+
     </application>
 
 </manifest>
